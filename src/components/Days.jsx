@@ -24,11 +24,19 @@ class Days extends Component {
     }
 
     handleNext = () => {
-      this.setState({index: this.state.index+1})
+ 
+      if (this.state.index > this.props.days.length){
+        console.log("work")
+        this.setState({index: this.state.index+1})
+
+      }
     }
 
     handlePrevious = () => {
-      this.setState({index: this.state.index-1})
+      if (this.state.index < this.props.days.length){
+        this.setState({index: this.state.index-1})
+
+      }
     }
     render() { 
         return ( 
