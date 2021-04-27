@@ -25,7 +25,7 @@ class Days extends Component {
 
     handleNext = () => {
  
-      if (this.state.index > this.props.days.length){
+      if (this.state.index < this.props.days.length-1){
         console.log("work")
         this.setState({index: this.state.index+1})
 
@@ -33,7 +33,7 @@ class Days extends Component {
     }
 
     handlePrevious = () => {
-      if (this.state.index < this.props.days.length){
+      if (this.state.index > 0){
         this.setState({index: this.state.index-1})
 
       }
